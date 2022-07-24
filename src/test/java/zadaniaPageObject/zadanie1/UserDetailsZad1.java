@@ -1,0 +1,35 @@
+package zadaniaPageObject.zadanie1;
+
+public class UserDetailsZad1 {
+    private String firstName;
+    private String lastName;
+    private String password;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public UserDetailsZad1 setFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public UserDetailsZad1 setLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public UserDetailsZad1 setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+}
+

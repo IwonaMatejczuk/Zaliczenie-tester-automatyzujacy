@@ -1,0 +1,22 @@
+Feature: Text search with DuckDuckGo
+Scenario: Successful search
+Given: Browser with open page at address: https://duckduckgo.com/
+When: Entered "Henryk Sienkiewicz" in the search input box
+And: Search button (magnifying glass) clicked
+Then: First 3 search results contain phrase: "Henryk Sienkiewicz"
+
+
+Feature: Logging into the educational portal CodersLab
+Scenario: Successful login
+Given: Browser with open page at address:  https://lms.coderslab.pl
+When: Entered e-mail and password in e-mail and password input boxes
+And: Login button clicked
+Then: Successfully being transfered to page address https://lms.coderslab.pl/course with user's courses displayed
+
+Feature: Launching the first Java prework presentation on the automation tester course
+Scenario: Successful open the first Java prework presentation
+Given: Browser with open page at address:  https://lms.coderslab.pl/course
+And: User is logged in
+When: Click in "Dzień 1- Java Podstawy"
+And: Click in first presentation "Powtórzenie z prework"
+Then: Open the presentation "Powtórzenie z prework"

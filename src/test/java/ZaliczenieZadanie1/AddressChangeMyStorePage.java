@@ -56,5 +56,6 @@ public class AddressChangeMyStorePage {
 
         WebElement searchPhoneInput = driver.findElement(By.name("phone"));
         searchPhoneInput.sendKeys(Phone);
+        
     }
 }

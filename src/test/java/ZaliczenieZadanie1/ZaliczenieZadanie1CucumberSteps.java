@@ -24,8 +24,8 @@ public class ZaliczenieZadanie1CucumberSteps {
     }
 
     @When("Log in as an existing user")
-    public void signedIn() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+    public void signedIn () {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement signInButton = driver.findElement(By.className("user-info"));
         signInButton.click();
 

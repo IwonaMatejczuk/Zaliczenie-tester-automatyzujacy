@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8fe49f89-fc5e-4e0c-98c0-60cd40d702c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out" beforeDir="false" afterPath="$PROJECT_DIR$/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cucumber/features/ZaliczenieZadanie1.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/cucumber/features/ZaliczenieZadanie1.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ZaliczenieZadanie1/ZaliczenieZadanie1CucumberSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ZaliczenieZadanie1/ZaliczenieZadanie1CucumberSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +67,7 @@
       <recent name="zadania" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ZaliczenieZadanie1Cucumber">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Successful test">
     <configuration name="Scenario: Successful test" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/cucumber/features/ZaliczenieZadanie1.feature" />
@@ -152,8 +151,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ZaliczenieZadanie1Cucumber" />
         <item itemvalue="Cucumber Java.Scenario: Successful test" />
+        <item itemvalue="JUnit.ZaliczenieZadanie1Cucumber" />
         <item itemvalue="JUnit.ShoppingOnTheMyStorePage" />
         <item itemvalue="JUnit.AddressChangeMyStorePage.shouldChangeAddress" />
         <item itemvalue="JUnit.DuckDuckGoTest" />

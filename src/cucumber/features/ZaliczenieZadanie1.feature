@@ -17,7 +17,7 @@ Feature: Zadanie zaliczeniowe 1
 
     Examples:
        |Alias   |Address          | City   | Post Code   |Country       |   Phone       |
-       |Adres   |ul. Kwiatowa     |Sopot   |03-123       |United Kingdom|123 123 123 |
+       |Adres   |ul. Kwiatowa     |Sopot   |03-123       |United Kingdom|123 123 123    |
 
 
 

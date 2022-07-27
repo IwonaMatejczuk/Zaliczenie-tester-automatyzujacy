@@ -26,14 +26,14 @@ public class ZaliczenieZadanie1CucumberSteps {
     @When("Log in as an existing user")
     public void signedIn() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        WebElement signInButton= driver.findElement(By.className("user-info"));
+        WebElement signInButton = driver.findElement(By.className("user-info"));
         signInButton.click();
 
-        WebElement searchEmailInPut= driver.findElement(By.name("email"));
+        WebElement searchEmailInPut = driver.findElement(By.name("email"));
         searchEmailInPut.sendKeys("testerka@test.pl");
-        WebElement searchPasswordInput= driver.findElement(By.name("password"));
+        WebElement searchPasswordInput = driver.findElement(By.name("password"));
         searchPasswordInput.sendKeys("haslo123.");
-        WebElement searchSignIn= driver.findElement(By.id("submit-login"));
+        WebElement searchSignIn = driver.findElement(By.id("submit-login"));
         searchSignIn.click();
     }
 
@@ -90,5 +90,6 @@ public class ZaliczenieZadanie1CucumberSteps {
         String checkAdddress = driver.findElement(By.id("notifications")).getText();
         String expectedNotifications = "Address successfully added!";
         Assert.assertEquals(expectedNotifications, checkAdddress);
+        System.out.println("Gratulacje prawidłowo dodałeś adres");
     }
 }

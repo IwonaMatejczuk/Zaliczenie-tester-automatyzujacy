@@ -73,8 +73,14 @@ public class ZaliczenieZadanie1CucumberSteps {
         searchPostalCodeInput.sendKeys(Postcode);
     }
 
+    @And("^Choose (.*)$")
+    public void searchAddressInPut5 (String Country) {
+        WebElement searchPostalCodeInput = driver.findElement(By.name("id_country"));
+        searchPostalCodeInput.sendKeys(Country);
+    }
+
      @And("^Complete (.*)$")
-    public void searchAddressInPut5 (String Phone) {
+    public void searchAddressInPut6 (String Phone) {
         WebElement searchPhoneInput = driver.findElement(By.name("phone"));
         searchPhoneInput.sendKeys(Phone);
     }

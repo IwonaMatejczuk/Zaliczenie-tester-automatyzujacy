@@ -6,10 +6,17 @@ Feature: Zadanie zaliczeniowe 1
     When Log in as an existing user
     And Address clicked
     And Create new address clicked
-    And New address form filled with <Alias>, <Address> , <City>, <Postal Code>, <Phone>
+    And New address form filled with <Alias>
+    And Add new <Address>
+    And Type <City>
+    And Enter the <Post Code>
+    And Complete <Phone>
+    And Save clicked
     Then Checked the added address
+
     Examples:
-       |Alias   |Address         | City  | Postal Code |Phone     |
-       |Test    |ul. Testowa 1/1 |Test   |03-123       |123123123 |
+       |Alias   |Address          | City   | Post Code   |Phone       |
+       |Adres   |ul. Kwiatowa     |Sopot   |03-123       |123 123 123 |
+
 
 

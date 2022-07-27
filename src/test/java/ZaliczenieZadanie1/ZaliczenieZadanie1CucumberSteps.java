@@ -1,9 +1,11 @@
 package ZaliczenieZadanie1;
 
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +16,7 @@ import java.time.Duration;
 public class ZaliczenieZadanie1CucumberSteps {
     private WebDriver driver;
 
-    @Given("^Browser with open page at (.*)$")
+    @Given("^Browser with open page at address (.*)$")
     public void browserCodersLab(String url) {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
         this.driver = new ChromeDriver();
@@ -23,7 +25,7 @@ public class ZaliczenieZadanie1CucumberSteps {
 
     @When("Log in as an existing user")
     public void signedIn() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         WebElement signInButton= driver.findElement(By.className("user-info"));
         signInButton.click();
 
@@ -42,33 +44,51 @@ public class ZaliczenieZadanie1CucumberSteps {
     }
 
     @And("Create new address clicked")
-    public void createNewAddressClicked(){
-        WebElement CreateNewAddressButton= driver.findElement(By.xpath("//*[contains(text(),\"Create new address\")]"));
-        CreateNewAddressButton.click();
+    public void createNewAddressCreate() {
+       WebElement createNewAddressButton= driver.findElement(By.xpath("//*[contains(text(),\"Create new address\")]"));
+        createNewAddressButton.click();
     }
 
-    @And("^New address form filled with (.*)$")
-    public void searchAddressInPut (String Alias, String Address, String City, String Postalcode, String Phone) {
+   @And("^New address form filled with (.*)$")
+    public void searchAddressInPut (String Alias) {
         WebElement searchAliasInput = driver.findElement(By.name("alias"));
         searchAliasInput.sendKeys(Alias);
+    }
 
+    @And("^Add new (.*)$")
+       public void searchAddressInPut2 (String Address) {
         WebElement searchAddressInput = driver.findElement(By.name("address1"));
         searchAddressInput.sendKeys(Address);
+    }
 
+    @And("^Type (.*)$")
+    public void searchAddressInPut3 (String City) {
         WebElement searchCityInput = driver.findElement(By.name("city"));
         searchCityInput.sendKeys(City);
+    }
 
+    @And("^Enter the (.*)$")
+    public void searchAddressInPut4 (String Postcode) {
         WebElement searchPostalCodeInput = driver.findElement(By.name("postcode"));
-        searchPostalCodeInput.sendKeys(Postalcode);
+        searchPostalCodeInput.sendKeys(Postcode);
+    }
 
+     @And("^Complete (.*)$")
+    public void searchAddressInPut5 (String Phone) {
         WebElement searchPhoneInput = driver.findElement(By.name("phone"));
         searchPhoneInput.sendKeys(Phone);
     }
 
-    @Then("Checked the added address")
-    public void checkedTheAddress() {
-        //throw new io.cucumber.java.PendingException();
-
+    @And("^Save clicked")
+    public void saveClicked () {
+        WebElement saveButton = driver.findElement(By.xpath("//*[contains(text(),\"Save\")]"));
+        saveButton.click();
     }
 
+    @Then("Checked the added address")
+    public void checkIfAddressWasAdd() {
+        String checkAdddress = driver.findElement(By.id("notifications")).getText();
+        String expectedNotifications = "Address successfully added!";
+        Assert.assertEquals(expectedNotifications, checkAdddress);
+    }
 }

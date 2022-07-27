@@ -1,5 +1,6 @@
 package ZaliczenieZadanie1;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,7 +25,7 @@ public class AddressChangeMyStorePage {
 
         driver.get("https://mystore-testlab.coderslab.pl");
 
-        WebElement signInButton= driver.findElement(By.className("user-info"));
+        WebElement signInButton= driver.findElement(By.xpath("//*[contains(text(), \"Sign in\")]"));
         signInButton.click();
 
         WebElement searchEmailInPut= driver.findElement(By.name("email"));
@@ -36,11 +37,11 @@ public class AddressChangeMyStorePage {
         WebElement searchSignIn= driver.findElement(By.id("submit-login"));
         searchSignIn.click();
 
-        WebElement addFirstAddress = driver.findElement(By.id("addresses-link"));
+        WebElement addFirstAddress = driver.findElement(By.id("address-link"));
         addFirstAddress.click();
 
-        WebElement CreateNewAddressButton= driver.findElement(By.xpath("//*[contains(text(),\"Create new address\")]"));
-        CreateNewAddressButton.click();
+        //WebElement CreateNewAddressButton= driver.findElement(By.xpath("//*[contains(text(),\"Create new address\")]"));
+        //CreateNewAddressButton.click();
 
         WebElement searchAliasInput = driver.findElement(By.name("alias"));
         searchAliasInput.sendKeys(Alias);
@@ -56,6 +57,12 @@ public class AddressChangeMyStorePage {
 
         WebElement searchPhoneInput = driver.findElement(By.name("phone"));
         searchPhoneInput.sendKeys(Phone);
-        
+
+        WebElement searchSaveButton= driver.findElement(By.xpath("//*[contains(text(),\"Save\")]"));
+        searchSaveButton.click();
+
+        WebElement searchUpdate= driver.findElement(By.xpath("//*[contains(text(),\"Update\")]"));
+        searchUpdate.click();
+
     }
 }
